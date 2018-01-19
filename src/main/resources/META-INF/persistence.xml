@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="CasaERP_PU" transaction-type="JTA">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <!--
+    <jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
+    -->
+    <jta-data-source>java:jboss/datasources/ErpDS</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    
+    <properties>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+    
+    <class>com.casa.erp.entities.Account</class>
+		<class>com.casa.erp.entities.BaseEntity</class>
+		<class>com.casa.erp.entities.DeliveryOrder</class>
+		<class>com.casa.erp.entities.DeliveryOrderLine</class>
+		<class>com.casa.erp.entities.Inventory</class>
+		<class>com.casa.erp.entities.Invoice</class>
+		<class>com.casa.erp.entities.InvoiceLine</class>
+		<class>com.casa.erp.entities.InvoicePayment</class>
+		<class>com.casa.erp.entities.InvoiceTax</class>
+		<class>com.casa.erp.entities.Journal</class>
+		<class>com.casa.erp.entities.JournalEntry</class>
+		<class>com.casa.erp.entities.JournalItem</class>
+		<class>com.casa.erp.entities.Partner</class>
+		<class>com.casa.erp.entities.Payment</class>
+		<class>com.casa.erp.entities.Product</class>
+		<class>com.casa.erp.entities.ProductCategory</class>
+		<class>com.casa.erp.entities.ProductUom</class>
+		<class>com.casa.erp.entities.ProductUomCategory</class>
+		<class>com.casa.erp.entities.PurchaseOrder</class>
+		<class>com.casa.erp.entities.PurchaseOrderLine</class>
+		<class>com.casa.erp.entities.SaleOrder</class>
+		<class>com.casa.erp.entities.SaleOrderLine</class>
+		<class>com.casa.erp.entities.Tax</class>
+		<class>com.casa.erp.entities.User</class>
+    
+    
+  </persistence-unit>
+</persistence>
